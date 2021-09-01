@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- saved from url=(0103)https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Responsive practice</title>
+    <style>
+      html {
+        font-family: sans-serif;
+        background-color: gray;
+      }
+
+      body {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: white;
+      }
+      section {
+        padding: 20px;
+      }
+
+      p {
+        line-height: 1.5;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1>My website</h1>
+
+        <p>This is a example for responsive pic</p>
+
+        <picture>
+          <source media="(max-width: 799px)" srcset="../09012021/resources/responsive-small.jpeg">
+          <source media="(min-width: 800px)" srcset="../09012021/resources/responsive-pic.jpeg">
+          <img src="../09012021/resources/responsive-pic.jpeg" alt="This is a view">
+        </picture>
+      </section>
+    </main>
+  
+</body></html>
