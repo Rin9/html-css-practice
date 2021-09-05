@@ -1,0 +1,24 @@
+html {
+  font-family: sans-serif;
+}
+
+/* Your CSS below here */
+
+p {
+  border: red solid;
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  padding: 1rem 2rem;
+  display: inline-block;
+  font-size: 1.125rem; /* default font size is 16px, we want it bigger, so*/
+  background-color: palevioletred;
+  color: pink;
+  text-shadow: 2px 2px #ff0000;
+  border-radius: 5px;
+  background: linear-gradient(to right bottom, rgba(0,0,0,0) 30%, palevioletred);
+  font-weight: bold;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.75),
+              3px 3px 3px rgba(255,255,255,0.5) inset,
+              -3px -3px 3px rgba(0,0,0,0.5) inset;
+}
