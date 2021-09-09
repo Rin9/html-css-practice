@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>This is an html practice tribute page to the one and only daft punk</title>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css">
+        <style>
+            html, body {
+      width: 100%;
+      height: 100%;
+      background-color: black;
+  }
+  
+  h1, h4, p {
+    color: #AAAAAA;
+  }
+  
+  a, a:visited{
+    color: white;
+  }
+  
+  a:hover{
+    color:gray;
+  }
+  
+  .header {
+      display: table;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background: url(./resources/Daft-Punk.jpeg) no-repeat center center scroll;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      background-size: cover;
+      -o-background-size: cover;
+  }
+  
+  .container {
+    margin-top: 50px;
+  }
+  
+  .title {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 5em;
+    font-weight: bold;
+  }
+  
+  .text-vertical-center {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  .margin-bottom {
+    margin-bottom: 30px;  
+  }
+  
+  .album-photo {
+    border: 1px solid black;
+    border-radius: 2%;
+  }
+        </style>
+    </head>
+    <body translate="no">
+        <header class="header">
+            <div class="text-vertical-center">
+                <h1 class="title">Daft Punk</h1>
+                <a href="#about">
+                  <span class="fa-stack fa-2x">
+                    <i class="fa fa-square-o fa-stack-2x"></i>
+                    <i class="fa fa-angle-double-down fa-stack-1x"></i>
+                  </span>
+                </a>
+              </div>
+        </header>
+        <div id="about" class="container">
+            <div class="row">
+               <h1 class="page-header">About</h1>
+               <div class="col-md-8">
+                 <div>
+                   <p> <strong> Daft Punk </strong> was a French electronic music duo formed in 1993 in Paris by Guy-Manuel de Homem-Christo and Thomas Bangalter. Widely regarded as one of the most influential acts in dance music history, they achieved popularity in the late 1990s as part of the French house movement. They garnered critical acclaim and commercial success in the years following, combining elements of house music with funk, techno, disco, indie rock and pop.
+                   </p>
+                   <p>After Bangalter and Homem-Christo's indie rock band Darlin' disbanded, they began experimenting with drum machines, synthesisers and the talk box. Their debut studio album Homework was released by Virgin Records in 1997 to positive reviews, backed by singles "Around the World" and "Da Funk". From 1999, they assumed robot personas with helmets, outfits and gloves for public appearances to preserve their identities; they made few media appearances. They were managed from 1996 to 2008 by Pedro Winter, the head of Ed Banger Records.</p>
+                   <p>To learn more about Daft Punk, see their page at <a href="https://en.wikipedia.org/wiki/Daft_Punk" target="_blank">Wikipedia</a></p>
+                 </div>
+               </div>
+               <div class="col-md-4">
+                 <img class="img-responsive" alt="Something went wrong" src="./resources/Daft-Punk-Over.jpeg">
+               </div>
+            </div>
+          </div>
+          <div id="discography" class="container">
+            <div class="row">
+               <h1 class="page-header">Discography</h1>
+               <div class="margin-bottom col-sm-6 col-md-3 text-center">
+                 <h4><strong>Random Access Memories</strong></h4>
+                 <a href="https://en.wikipedia.org/wiki/Random_Access_Memories" target="_blank"> 
+                 <img class="album-photo img-responsive" src="./resources/Daft_Punk_RAM.jpg" alt="Can't load image"> </a>
+               </div>
+              <div class="margin-bottom col-xs-12 col-sm-6 col-md-3 text-center">
+                 <h4><strong>Tron: Legacy</strong></h4>
+                 <a href="https://en.wikipedia.org/wiki/Tron:_Legacy_(soundtrack)" target="_blank"> 
+                 <img class="album-photo img-responsive" src="./resources/Daft_Punk_Tron.jpg" alt="Can't load image"> </a>
+               </div>
+              <div class="margin-bottom col-xs-12 col-sm-6 col-md-3 text-center">
+                 <h4><strong>Discovery</strong></h4>
+                 <a href="https://en.wikipedia.org/wiki/Discovery_(Daft_Punk_album)" target="_blank"> 
+                 <img class="album-photo img-responsive" src="./resources/Daft_Punk_Discovery.jpeg" alt="Can't load image"> </a>
+               </div>
+              <div class="margin-bottom col-xs-12 col-sm-6 col-md-3 text-center">
+                 <h4><strong>Homework</strong></h4>
+                 <a href="https://en.wikipedia.org/wiki/Homework_(Daft_Punk_album)" target="_blank"> 
+                 <img class="album-photo img-responsive" src="./resources/Daftpunk-homework.jpeg" alt="Can't load image"> </a>
+               </div>
+            </div>
+          </div>
+          <footer>
+            <div class="row">
+              <div class="col-md-offset-4 col-md-4 text-center">
+                <p>Tribute to one and only Daft Punk</p>
+              </div>
+            </div>
+          </footer>
+
+    </body>
+</html>
