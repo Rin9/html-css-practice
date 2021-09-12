@@ -1,0 +1,117 @@
+html {
+  background: black;
+  font-family: "Azeret Mono", monospace;
+  font-size: 10px;
+  color: white;
+}
+
+body {
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  margin: 0 auto;
+}
+
+#img-caption {
+  background: gray;
+  font-size: 2rem;
+}
+
+#img-caption:hover {
+  background: linear-gradient(#e66465, #9198e5);
+}
+
+#title {
+  font-size: 5rem;
+  color: white;
+  text-align: center;
+}
+
+#tribute-info {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 10px;
+  grid-template-areas:
+    "article aside"
+    "footer footer";
+}
+
+#tribute-article {
+  font-size: 2rem;
+  grid-area: article;
+}
+
+#tribute-aside {
+  grid-area: aside;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "album1 album2"
+    "album3 album4";
+}
+
+#album1,
+#album2,
+#album3,
+#album4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#album1 img,
+#album2 img,
+#album3 img,
+#album4 img {
+  flex-shrink: 0;
+  width: 300px;
+  height: 250px;
+}
+
+#album1 {
+  grid-area: album1;
+}
+#album2 {
+  grid-area: album2;
+}
+#album3 {
+  grid-area: album3;
+}
+#album4 {
+  grid-area: album4;
+}
+
+#album1:hover,
+#album2:hover,
+#album3:hover,
+#album4:hover {
+  animation-name: flow-radius;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes flow-radius {
+  100% {
+    background-color: rgb(192, 192, 192);
+  }
+}
+
+#tribute-link {
+  color: white;
+  font-size: 2rem;
+  text-decoration: none;
+  grid-area: footer;
+}
+
+#tribute-link:hover {
+  background: white;
+  color: black;
+}
