@@ -1,11 +1,18 @@
 #top {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    align-items: center;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
-nav {
+#nav {
     background-color: blue;
+    width: 100px;
+    text-align: center;
 }
 
 #icon {
