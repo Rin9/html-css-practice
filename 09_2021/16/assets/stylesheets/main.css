@@ -313,6 +313,51 @@ p a {
 }
 
 /*
+  ========================================
+  Speakers
+  ========================================
+*/
+  
+
+.speaker-info {
+  border: 1px solid #dfe2e5;
+  border-radius: 5px;
+  margin-top: 88px;
+  padding-bottom: 22px;
+  text-align: center;
+}
+
+.speaker-info ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.speaker {
+  margin-bottom: 44px;
+}
+
+/*=======================
+
+style for img
+
+=========================
+*/
+
+.teaser img {
+  border-radius: 5px;
+  display: block;
+  margin-bottom: 22px;
+  max-width: 100%;
+}
+
+.speaker-info img {
+  border-radius: 50%;
+  height: 130px;
+  margin: -66px 0 22px 0;
+  vertical-align: top;
+} 
+
+/*
 
 ==========================
 
