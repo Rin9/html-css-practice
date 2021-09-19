@@ -1,0 +1,120 @@
+/**
+============
+
+general
+
+============
+**/
+
+*, 
+*::before, 
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: inherit;
+    font-family: 'Roboto';
+    color: #fff;
+}
+
+html {
+    font-size: 10px;
+}
+
+.head {
+    color: white;
+}
+
+/**
+=============
+top bar 
+=============
+**/
+
+.top_bar {
+    background: #282828fa;
+    position: fixed;
+    align-items: center;
+    height: 6rem;
+    width: 100%;
+    display: flex;
+    margin: -8px 8px 0 -8px;
+}
+
+
+.menu {
+    background: #282828fa;
+    margin: 0 2.5rem;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+}
+
+.youtube {
+    font-size: 1.5rem;
+    margin-left: 5px;
+}
+
+.search_bar {
+    display: flex;
+    margin: 0 auto;
+    max-width: 85rem;
+    width: 70rem;
+    align-items: center;
+}
+
+.search_input {
+    width: 100%;
+    background: black;
+    border: solid 2px black;
+    padding: 5px 0 5px 10px;
+    margin-top: 5px;
+    margin-right: 5px;
+    font-size: 1.5rem;
+}
+
+.magnify_icon {
+    display: flex;
+    justify-content: center;
+    background-color: #393939;
+    width: 75px;
+    height: 35px;
+    margin-top: .5rem;
+}
+
+.user_panel {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    width: 24px;
+    height: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.user_panel .btn {
+    margin-right: 2.8rem;
+}
+
+.sign_btn {
+    display: flex;
+    width: 11rem;
+    height: 3.5rem;
+    border: 2px solid #3ea6ff;
+    align-items: center;
+}
+
+.account_icon {
+    margin-left: .5rem;
+}
+
+.sign_btn span {
+    display: block;
+    margin-left: 1rem;
+    color: #3ea6ff;
+}
