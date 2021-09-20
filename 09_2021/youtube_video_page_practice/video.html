@@ -9,8 +9,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header>
-            <section class="top_bar">
+        <div class="container">
+            <header class="top_bar">
                 <div class="menu">
                     <img src="assets/images/menu_icon_30.png" alt="menu icon">
                 </div>
@@ -36,13 +36,88 @@
                     </button>
                     <button class="btn sign_btn">
                         <img class="account_icon" src="assets/images/account_circle.svg" alt="account circle">
-                        <span>SIGN IN</span>
+                        <span id="sign_span">SIGN IN</span>
                     </button>
                 </div>
-            </section>
-        </header>
-        <footer>
-
-        </footer>
+            </header>
+            <div class="content">
+                <main>
+                    <section class="video_container">
+                        <div class="player">
+                            <iframe src="https://www.youtube.com/embed/YUsVyLkjH-M?start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="video_info">
+                            <h3 class="tags">
+                                #ProPlayersClips #LeagueofLegends #caedrel
+                            </h3>
+                            <h2 class="video_title">
+                                Sivir vs Ahri
+                            </h2>
+                            <div class="video_primary_info">
+                                <span class="video_views_date">
+                                    22,155次观看 • 2021年9月19日
+                                </span>
+                                <div id="flex"></div>
+                                <div class="video_options">
+                                    <div class="likes_dislikes">
+                                        <button class="btn like_btn">
+                                            <img src="assets/images/thumb-up.svg" alt="likes">
+                                            <span>5314</span>
+                                        </button>
+                                        <button class="btn dislike_btn">
+                                            <img src="assets/images/thumb-down.svg" alt="dislikes">
+                                            <span>0</span>
+                                        </button>
+                                    </div>
+                                    <button class="btn share_btn">
+                                        <img src="assets/images/share.svg" alt="share">
+                                        <span>SHARE</span>
+                                    </button>
+                                    <button class="btn save_btn">
+                                        <img src="assets/images/playlist-plus.svg" alt="save">
+                                        <span>SAVE</span>
+                                    </button>
+                                    <button class="btn more_btn">
+                                        <img src="assets/images/dots-horizontal.svg" alt="more">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="description">
+                        <div class="channel_info">
+                            <div class="channel_logo">
+                                <a href="https://www.youtube.com/channel/UCnFcvxXSvIw0KrpOVdzIGsA" target="_blank">
+                                    <img src="assets/images/channel_logo.jpeg" alt="channel logo">
+                                </a>
+                            </div>
+                            <div class="channel_info_detail">
+                                <div class="channel_name">
+                                    <a class="channel_link" href="https://www.youtube.com/channel/UCnFcvxXSvIw0KrpOVdzIGsA" target="_blank">
+                                        Pro Players' Clips
+                                    </a>
+                                    <img src="assets/images/check-circle.svg" alt="verified">
+                                </div>
+                                <div class="channel_subscribers_count">
+                                    40.12K subscribers
+                                </div>
+                            </div>
+                            <button class="btn subscrib_btn">SUBSCRIBE</button>
+                        </div>
+                    </section>
+                </main>
+                <aside>
+                    something
+                </aside>
+                <section class="comment">
+                    comment
+                </section>
+            </div>
+    
+            <footer>
+    
+            </footer>
+        </div>
+        
     </body>
 </html>
