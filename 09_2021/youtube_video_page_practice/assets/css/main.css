@@ -211,6 +211,10 @@ video description
 ========
 **/
 
+.description {
+    border-bottom: solid 2px rgba(170, 170, 170, 0.2);
+}
+
 .channel_info {
     display: flex;
     align-items: center;
@@ -256,3 +260,209 @@ video description
     background-color: #bd0000;
 }
 
+.video_description {
+    margin-left: 7rem;
+}
+
+.video_description_para a {
+    text-decoration: none;
+    color: #3ea6ff;
+}
+
+.game_info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.game_info div:first-child {
+    margin-left: 70px;
+}
+
+.card_info {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    flex-grow: 1;
+    background-color: rgba(0,0,0,0.3);
+    max-width: 45%;
+}
+
+.card_info_game {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1.6rem;
+}
+
+.game_year {
+    font-size: 1.2rem;
+    color: #aaa;
+}
+
+.browse_game {
+    font-size: 1.2rem;
+    color: #aaa;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.catalog_icon {
+    border-radius: 50%;
+    height: 55%;
+    margin-left: 30px;
+}
+
+.show-more {
+    width: auto;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #aaa;
+    margin: 20px 0 20px 70px;
+    background-color: #1f1f1f;
+    border: none;
+}
+
+/**
+================================
+
+
+aside section
+
+
+================================
+**/
+
+.up_next {
+    margin-left: 5rem;
+    padding-bottom: 4rem;
+    border-bottom: solid 2px rgba(170, 170, 170, 0.2);
+}
+
+.autoplay {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.autoplay > span {
+    flex-grow: 1;
+    font-size: 1.6rem;
+}
+
+.autoplay span ~ span {
+    padding-right: 1rem;
+    flex-grow: 0;
+    color: #aaa;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+
+
+.switch {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 38px;
+    height: 15px;
+    border-radius: 15px;
+    border: none;
+    background-color: rgb(66, 66, 66);
+}
+
+.switch::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #3ea6ff;
+    box-shadow: 0 0 5px 1px rgb(0 0 0 / 50%);
+}
+
+
+.thumbnail {
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding-top: 1rem;
+    text-decoration: none;
+}
+
+.thumbnail_img {
+    position: relative;
+}
+
+.duration {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: -2.7rem;
+    text-align: right;
+}
+
+.duration span {
+    padding: 0.1rem 0.4rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: 2px;
+    background-color: #000;
+    margin-bottom: 3rem;
+    position: relative;
+    bottom: 1rem;
+}
+
+.thumbnail-img-overlay {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    top: 0;
+}
+
+.thumbnail-img-overlay button {
+    margin-right: 1rem;
+    margin-top: .5rem;
+}
+
+.thumbnail-info {
+    margin-left: 1.5rem;
+}
+
+.thumbnail-title {
+    font-size: 1.5rem;
+}
+
+.thumbnail-channel-name {
+    display: flex;
+    align-items: center;
+    color: #aaa;
+}
+
+.thumbnail-channel-name > img {
+    margin-left: 0.5rem;
+    width: 14px;
+}
+
+.thumbnail-video-info {
+    padding-top: 0.2rem;
+    padding-bottom: 0.3rem;
+    font-size: 1.3rem;
+    color: #aaa;
+}
+
+.thumbnail-new {
+    padding: 0.1rem 0.5rem;
+    background-color: rgb(51, 51, 51);
+    border-radius: 2px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #aaa;
+}
+
+.recommendation {
+    margin-left: 5rem;
+}
