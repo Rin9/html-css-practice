@@ -17,6 +17,8 @@ general
 
 html {
     background-color: #ECEEF1;
+    font-family: 'Open Sans', sans-serif;
+    color: #839A9F;
 }
 
 /**
@@ -148,6 +150,7 @@ main part
     font-family: 'Open Sans', sans-serif;
     font-weight: 200;
     margin-top: 20px;
+    color: #393A3D;
 }
 
 .form-description {
@@ -162,8 +165,129 @@ main part
 
 .form-description a {
     text-decoration: none;
-    color: #839A9F;
+    color: #0077c5;
 }
+
+
+/**
+==========================
+
+form part
+
+==========================
+**/
+
+.input-fieldset {
+    border: none;
+    margin-top: 15px;
+    padding: 0 40px 0 40px;
+    width: 100%;
+}
+
+.input-fieldset:first-child {
+    margin-top: 25px;
+}
+
+.form-label {
+    font-weight: lighter;
+    color: #393A3D;
+    font-size: 1rem;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.form-input {
+    height: 34px;
+    width: 100%;
+    min-width: 160px;
+    padding-left: 8px;
+    padding-right: 6px;
+    border: 1px solid #c1c5c8;
+    color: #000000;
+    outline: none;
+    font-size: 1.2em;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.error-message {
+    margin: .375rem 0;
+    height: 24px;
+    width: 100%;
+    min-width: 160px;   
+}
+
+.input-fieldset p {
+    font-weight: lighter;
+    font-size: .5em;
+}
+
+.input-container {
+    position: relative;
+}
+
+.img-container {
+    
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 4px;  
+}
+
+.img-container img {
+    height: 25px;
+    width: 25px;
+}
+
+.sign-up-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 40px;
+}
+
+.sign-up {
+    height: 44px;
+    width: 100%;
+    font-size: 16px;
+    color: #fff;
+    background-color: #0077c5;
+    outline: none;
+    border: 0;
+    border-color: #0077c5;
+    padding: .375rem 0.75rem;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 75%);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.form-footer {
+    text-align: center;
+}
+
+.terms-for-use {
+    margin-top: 20px;
+    font-size: 12px;
+    font-style: italic;
+    color: #757575;
+    line-height: 1.5;
+}
+
+.captcha {
+    background-color: #ECEEF1;
+    color: #8d9096;
+    font-size: 10px;
+    line-height: 1.2;
+    text-align: center;
+    padding: 1rem;
+    margin: 32px -30px -30px -30px;
+}
+
+
 
 /**
 ==========================
@@ -173,7 +297,3 @@ footer
 ==========================
 **/
 
-.footer {
-    background-color: cornflowerblue;
-    height: 150px;
-}

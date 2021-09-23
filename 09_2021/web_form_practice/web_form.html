@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>web_form</title>
+        <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
         <link rel="stylesheet" href="assets/css/main.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,8 +54,82 @@
                         <br>
                         <a href="#">Learn More</a>
                     </p>
+                    <form action method="post">
+                        <fieldset class="input-fieldset">
+                            <label id="label-email" class="form-label" for="email">
+                                Email address
+                            </label>
+                            <div class="input-container">
+                                <input type="email" 
+                                       name="email" 
+                                       id="email" 
+                                       class="form-input" 
+                                       maxlength="100" 
+                                       autofocus
+                                       required="required"
+                                       autocomplete="off">
+                            </div>
+                            <div class="error-message"></div>
+                        </fieldset>
+                        <fieldset class="input-fieldset">
+                            <label id="label-phone" class="form-label" for="phone">
+                                Phone (recommended)
+                            </label>
+                            <div class="input-container">
+                                <input type="phone" 
+                                       name="phone" 
+                                       id="phone" 
+                                       class="form-input" 
+                                       maxlength="20" 
+                                       autofocus
+                                       required="required"
+                                       autocomplete="off">
+                            </div>
+                            <p>Standard call, messaging or data rates may apply.</p>
+                            <div class="error-message"></div>
+                        </fieldset>
+                        <fieldset class="input-fieldset">
+                            <label id="label-password" class="form-label" for="password">
+                                Password
+                            </label>
+                            <div class="input-container">
+                                <input type="password" 
+                                       name="password" 
+                                       id="password" 
+                                       class="form-input" 
+                                       maxlength="20" 
+                                       autofocus
+                                       required="required"
+                                       autocomplete="off">
+                                <div class="img-container">
+                                    <img src="assets/images/unlock.png" alt="unlock icon">
+                                </div>
+                            </div>
+                            
+                            <div class="error-message"></div>
+                        </fieldset>
+                        <div class="sign-up-button">
+                            <button type="submit" name="sign-up" class="sign-up">
+                                <img src="assets/images/icons8-lock.svg" alt="sign-up">
+                                <span>Create Account</span>
+                            </button>
+                        </div>
+                        <div class="form-footer">
+                            <div class="terms-for-use">
+                                By Clicking Create Account , you agree to our
+                                <br>
+                                Terms  and have read and acknowledge our  Global Privacy Statement.
+                                <br>
+                                Updated on December 3, 2020
+                            </div>
+                        </div>
+                        <div class="captcha">
+                            Invisible reCAPTCHA by Google Privacy Policy and Terms of Use.
+                        </div>
+                    </form>
                     
                 </div>
+                
             </div>
         </main>
         <footer>
