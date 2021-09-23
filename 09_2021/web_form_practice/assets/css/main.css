@@ -1,0 +1,179 @@
+
+/**
+==========================
+
+general
+
+==========================
+**/
+
+*, 
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #ECEEF1;
+}
+
+/**
+==========================
+
+top header
+
+==========================
+**/
+
+.top-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    gap: .5rem;
+    padding: .5rem 1rem;
+}
+
+.account-present {
+    color: #505050;
+    line-height: 1.5;
+    font-size: 12px;
+}
+
+.account-present a {
+    text-decoration: none;
+    color: #0077C5;
+}
+
+.account-present a:hover {
+    text-decoration: underline #0077C5;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 13.5px;
+    border: solid 1px #4c4c4c;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #0077C5;
+    padding: .3rem 1.2rem;
+    text-decoration: none;
+}
+
+.btn span,
+.btn img {
+    background-color: #0077c5;
+}
+
+/**
+==========================
+
+main title
+
+==========================
+**/
+
+.main-logo {
+    margin-top: 20px;
+}
+
+a.logo{
+    display: block;
+    background-image: url(https://captain-usopp.github.io/sign-up-form/images/ecosystem_logos_new@2x-9448e6be.png);
+    background-size: 562px 83px;
+    width: 118px;
+    height: 35px;
+    margin: 0 auto;
+}
+
+/**
+==========================
+
+3 icons logo
+
+==========================
+**/
+
+.icons-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin: 20px 12px 20px 0;
+}
+
+.logo-container:last-child {
+    margin-right: 0;
+}
+
+.icon-logo {
+    width: 23px;
+    height: 23px;
+    margin-right: 6px;
+}
+
+.icon-name {
+    color: #6b6c71;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/**
+==========================
+
+main part
+
+==========================
+**/
+
+.main-container {
+    width: 380px;
+    height: 650px;
+    margin: auto;
+    background-color: #fff;
+    border: 1px solid #c7c7c7;
+}
+
+.form-header {
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 200;
+    margin-top: 20px;
+}
+
+.form-description {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: .8rem;
+    font-weight: lighter;
+    margin-top: 20px;
+    line-height: 1.3;
+    color: #839A9F;
+}
+
+.form-description a {
+    text-decoration: none;
+    color: #839A9F;
+}
+
+/**
+==========================
+
+footer
+
+==========================
+**/
+
+.footer {
+    background-color: cornflowerblue;
+    height: 150px;
+}
