@@ -4,17 +4,55 @@
         <meta charset="UTF-8">
         <title>news page practice</title>
         <link rel="stylesheet" href="assets/styles/main.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Titillium+Web&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header class="header">
-            <div class="newsletters"></div>
-            <h1 class="title"></h1>
-            <div class="btn subscribe"></div>
+        <section class="header-container">
+            <header class="header">
+                <div class="newsletters">
+                    <span>NEWSLETTERS</span>
+                    <a href="https://www.newscientist.com/sign-up/" target="_blank">
+                        Sign up to read our regular email newsletters
+                    </a>
+                </div>
+                <h1 class="title">NewScientist</h1>
+                <button class="btn subscribe">
+                    SUBSCRIBE AND SAVE 69%
+                </button>
+            </header>
             <section class="nav-container">
-                <nav class="nav"></nav>
-                <div class="btn signin"></div>
-                <div class="btn search"></div>
+                <ul class="nav">
+                    <li class="link">News</li>
+                    <li class="link">Podcasts</li>
+                    <li class="link">Video</li>
+                    <li class="link">Technology</li>
+                    <li class="link selected">Space</li>
+                    <li class="link">Physics</li>
+                    <li class="link">Health</li>
+                    <li class="link more">More
+                        <img src="https://img.icons8.com/ios-glyphs/30/000000/double-down--v1.png"/>
+                    </li>
+                    <li class="link special">Shop</li>
+                    <li class="link special">Courses</li>
+                    <li class="link special">Events</li>
+                    <li class="link special">Tours</li>
+                    <li class="link special">Jobs</li>
+                </ul>
+                <div class="btn-section">
+                    <div class="btn signin">
+                        <img src="https://img.icons8.com/ios-glyphs/30/000000/person-male.png"/>Sign In</div>
+                    <div class="btn search">
+                        <img src="https://img.icons8.com/material-outlined/24/000000/search--v1.png"/>Search</div>
+                </div>
             </section>
-        </header>
+        </section>
+        <main class="main-container">
+            <section class="main-part"></section>
+            <aside class="sidebar"></aside>
+        </main>
+
     </body>
 </html>

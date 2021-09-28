@@ -26,6 +26,11 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
+  font-family: Titillium Web,Helvetica,Trebuchet MS,Arial,sans-serif;
+}
+
+a {
+    text-decoration: none;
 }
 
 /**
@@ -35,3 +40,132 @@ header
 
 ==========================
 **/
+
+.header-container {
+    margin: 0 auto;
+    height: 20vh;
+}
+
+.header {
+    background: #fff;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.newsletters {
+    height: 10rem;
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    padding-top: 4rem;
+}
+
+.newsletters span {
+    color: #1abbe8;
+}
+
+.newsletters a {
+    color: #999999;
+    font-family: 'PT Serif', serif;
+}
+
+.title {
+    height: 5rem;
+    width: 40rem;
+    color: #231f1f;
+    font-size: 5rem;
+    text-align: center;
+    font-family: 'PT Serif', serif;
+}
+
+.btn.subscribe{
+    background: #00b3e5;
+    width: 20rem;
+    color: white;
+    font-family: 'PT Serif', serif;
+    font-size: 1.3rem;
+    font-weight: 900;
+    border-radius: .5rem;
+    border: 0;
+    padding: .5rem 1rem;
+}
+
+.nav-container {
+    /* background: cyan; */
+    height: 5rem;
+    width: 100%;
+    margin-top: 5rem;
+    border-bottom: 1px solid #999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    flex-grow: 2;
+}
+.btn-section {
+    flex-grow: 1;
+    display: flex;
+}
+
+.link,
+.btn {
+    padding: .5rem;
+    color: #002837;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.link.selected {
+    border-bottom: 5px solid var(--black);
+    margin-bottom: -.5rem;
+    color: #1abbe8;
+}
+
+.link.more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link.more img{
+    width: 1rem;
+    height: 1rem;
+}
+
+.link.special {
+    color: #1abbe8;
+}
+
+.btn.signin,
+.btn.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn.search img,
+.btn.signin img {
+    height: 2rem;
+    width: 2rem;
+}
+
+/**
+==========================
+
+main part
+
+==========================
+**/
+
+.main-container {
+    height: 800px;
+    background: var(--yellow);
+}
