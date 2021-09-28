@@ -9,6 +9,10 @@ general
 :root {
     --yellow: #ffc600;
     --black: #272727;
+    --grey: #999999;
+    --waterblue: #1abbe8;
+    --whitesmoke: #f5f5f5;
+    --darkblue: #045587;
 }
   
 
@@ -48,16 +52,12 @@ header container
     justify-items: center;
     align-items: center;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 50px;
     grid-template-areas: 
         "newsletters title btn-subscribe"
-        "nav-container nav-container nav-container";
+        "nav-container nav-container btn-section";
+    border-bottom: 1px solid grey;
 }
-
-/* .header {
-    grid-area: header;
-}
- */
-
 
 .newsletters {
     grid-area: newsletters;
@@ -69,7 +69,7 @@ header container
 }
 
 .newsletters span {
-    color: #1abbe8;
+    color: var(--waterblue);
 }
 
 .newsletters a {
@@ -108,8 +108,311 @@ header container
 }
 
 
+/**
+==========================
 
-.nav-container {
+nav-container
+
+==========================
+**/
+
+.nav {
+    /* this part is for the nav as a grid item */
     grid-area: nav-container;
-    background: var(--black);
+    align-self: flex-end;
+    padding-left: 0;
+
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.link,
+.btn {
+    padding: .5rem;
+    color: #002837;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.link:first-child {
+    padding-left: 0;
+}
+.link:last-child {
+    padding-right: 0;
+}
+
+
+.link.more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link.more img{
+    width: 1.2rem;
+    height: 1.2rem;
+    padding-left: .3rem;
+}
+
+.link.special,
+.link.selected {
+    color: var(--waterblue);
+}
+
+.link.selected {
+    border-bottom: 5px solid var(--black);
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-bottom: -1rem;
+}
+
+/* .nav,
+.btn-section {
+    border-bottom: 1px solid gray;
+} */
+
+/**
+==========================
+
+btn-section
+
+==========================
+**/
+
+.btn-section {
+    /* this part is the section as a part of grid item */
+    grid-area: btn-section;
+    align-self: flex-end;
+    justify-self: flex-end;
+
+    /* this part is for the section as a flexbox container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.btn.signin,
+.btn.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn.signin img,
+.btn.search img {
+    height: 2rem;
+    width: 2rem;
+}
+
+
+/**
+==========================
+
+main-container
+
+==========================
+**/
+
+.main-container {
+    width: 70vw;
+    margin: 0 auto;
+
+    /* ============================ */
+    /* don't know if I need to delete this */
+    height: 150vh;
+    /* ============================ */
+
+    /* real ones */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    column-gap: 3vw;
+}
+
+.main-part {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.article-header {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.icons-container {
+    margin-top: -20px;
+}
+
+.icons{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: flex-start;
+    column-gap: 1rem;
+    padding-left: 0;
+}
+
+.icon img {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+}
+
+
+.category-date-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.article-category {
+    font-size: 1.5rem;
+}
+
+.article-date,
+.author-info  {
+    font-size: 1.5rem;
+    color: var(--grey);
+}
+
+.author {
+    color: var(--waterblue);
+}
+
+.image-container {
+    margin: 0;
+    margin-top: 10px;
+}
+
+.article-image {
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.image-source {
+    color: var(--grey);
+    font-weight: 100;
+    font-size: 1rem;
+}
+
+.article {
+    font-size: 2rem;
+    color: var(--black);
+    font-weight: 300;
+}
+
+.read-more {
+    background: var(--whitesmoke);
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    margin-top: 20px;
+}
+
+.read-more-link {
+    color: var(--waterblue);
+}
+
+.more-articles {
+    color: var(--black);
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-top: 30px;
+}
+
+.btn.more {
+    color: white;
+    background: var(--darkblue);
+    border: none;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5%;
+    margin: 0 5px;
+}
+
+/**
+==========================
+
+sidebar
+
+==========================
+**/
+
+.sidebar {
+    margin-top: 30px;
+    width: 25vw;
+    height: 300px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar-categorys {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    column-gap: 5px;
+    color: var(--black);
+}
+
+.sidebar-category {
+    background: var(--whitesmoke);
+    display: inline-block;
+    border: 1px solid var(--whitesmoke);
+    font-size: 1.5rem;
+    font-weight: 900;
+    padding: 5px 15px;
+}
+
+.sidebar-category.selected {
+    background: var(--waterblue);
+    color: white;
+}
+
+.sidebar-blocks-container {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 2.5rem;
+}
+
+.sidebar-block {
+    background: var(--whitesmoke);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+.sidebar-block-link {
+    color: var(--black);
+}
+
+.sidebar-block span {
+    font-size: 3rem;
+    color: var(--waterblue);
 }
