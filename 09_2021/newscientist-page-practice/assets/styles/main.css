@@ -36,31 +36,36 @@ a {
 /**
 ==========================
 
-header
+header container
 
 ==========================
 **/
 
 .header-container {
+    width: 70vw;
     margin: 0 auto;
-    height: 20vh;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+        "newsletters title btn-subscribe"
+        "nav-container nav-container nav-container";
 }
 
-.header {
-    background: #fff;
-    height: 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5rem;
+/* .header {
+    grid-area: header;
 }
+ */
+
 
 .newsletters {
-    height: 10rem;
-    width: 15rem;
+    grid-area: newsletters;
     display: flex;
     flex-direction: column;
     padding-top: 4rem;
+    justify-self: start;
+    font-size: 1.5rem;
 }
 
 .newsletters span {
@@ -72,7 +77,12 @@ header
     font-family: 'PT Serif', serif;
 }
 
+.newsletters a:hover {
+    text-decoration: underline;
+}
+
 .title {
+    grid-area: title;
     height: 5rem;
     width: 40rem;
     color: #231f1f;
@@ -80,92 +90,26 @@ header
     text-align: center;
     font-family: 'PT Serif', serif;
 }
-
 .btn.subscribe{
+    grid-area: btn-subscribe;
     background: #00b3e5;
-    width: 20rem;
     color: white;
     font-family: 'PT Serif', serif;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 900;
     border-radius: .5rem;
     border: 0;
-    padding: .5rem 1rem;
+    padding: 1rem 3rem;
+    justify-self: end;
+    cursor: pointer;
 }
+.btn.subscribe:hover {
+    background: #292995;
+}
+
+
 
 .nav-container {
-    /* background: cyan; */
-    height: 5rem;
-    width: 100%;
-    margin-top: 5rem;
-    border-bottom: 1px solid #999;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav {
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    flex-grow: 2;
-}
-.btn-section {
-    flex-grow: 1;
-    display: flex;
-}
-
-.link,
-.btn {
-    padding: .5rem;
-    color: #002837;
-    font-weight: 700;
-    font-size: 1.5rem;
-}
-
-.link.selected {
-    border-bottom: 5px solid var(--black);
-    margin-bottom: -.5rem;
-    color: #1abbe8;
-}
-
-.link.more {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.link.more img{
-    width: 1rem;
-    height: 1rem;
-}
-
-.link.special {
-    color: #1abbe8;
-}
-
-.btn.signin,
-.btn.search {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.btn.search img,
-.btn.signin img {
-    height: 2rem;
-    width: 2rem;
-}
-
-/**
-==========================
-
-main part
-
-==========================
-**/
-
-.main-container {
-    height: 800px;
-    background: var(--yellow);
+    grid-area: nav-container;
+    background: var(--black);
 }
