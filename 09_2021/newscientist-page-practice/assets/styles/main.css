@@ -13,6 +13,8 @@ general
     --waterblue: #1abbe8;
     --whitesmoke: #f5f5f5;
     --darkblue: #045587;
+    --lightseagreen: #20b2aa;
+    --red: #ff0000;
 }
   
 
@@ -222,11 +224,6 @@ main-container
     width: 70vw;
     margin: 0 auto;
 
-    /* ============================ */
-    /* don't know if I need to delete this */
-    height: 150vh;
-    /* ============================ */
-
     /* real ones */
     display: flex;
     flex-direction: row;
@@ -254,9 +251,9 @@ main-container
     align-items: flex-start;
 }
 
-.icons-container {
+/* .icons-container {
     margin-top: -20px;
-}
+} */
 
 .icons{
     display: flex;
@@ -358,7 +355,6 @@ sidebar
 .sidebar {
     margin-top: 30px;
     width: 25vw;
-    height: 300px;
     position: sticky;
     top: 0;
     display: flex;
@@ -415,4 +411,73 @@ sidebar
 .sidebar-block span {
     font-size: 3rem;
     color: var(--waterblue);
+}
+
+
+/**
+==========================
+
+bottom-part
+
+==========================
+**/
+
+.bottom-container {
+    width: 70vw;
+    margin: 50px auto 0 auto;
+}
+
+.share-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    column-gap: 10vw;
+}
+
+.icons {
+    margin-top: 0;
+}
+
+.magzine-info {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 20px;
+}
+
+.magzine-image-container {
+    height: 80vh;
+}
+
+.magzine-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.subscribe-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    row-gap: 15px;
+}
+
+.btn.bottom{
+    background: #00b3e5;
+    color: white;
+    font-family: 'PT Serif', serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    border-radius: .5rem;
+    border: 0;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    padding: 5px 40px;
+}
+
+.btn.bottom.view-more {
+    background: var(--lightseagreen);
+}
+
+.btn.bottom.buy-print {
+    background: var(--red);
 }
