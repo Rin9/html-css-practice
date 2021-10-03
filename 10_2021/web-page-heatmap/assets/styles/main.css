@@ -1,0 +1,184 @@
+/**
+==========================
+
+general
+
+==========================
+**/
+
+:root {
+    --yellow: #ffc600;
+    --black: #272727;
+    --waterblue: #1abbe8;
+    --whitesmoke: #f5f5f5;
+    --darkblue: #045587;
+
+    --silvergrey: #C0C0C0;
+    --lightgrey: #A9A9A9;
+    --grey: #999999;
+    --darkgrey:#696969;
+
+}
+
+
+  
+
+html {
+    font-size: 10px;
+    color: var(--black);
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/**
+==========================
+
+global-header
+
+==========================
+**/
+
+
+.global-header {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr 2fr;
+    grid-template-rows: 10rem 5rem;
+    gap: 1rem;
+}
+
+.logo,
+.nav-bar,
+.search-bar,
+.white-nav {
+    background: var(--silvergrey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.more {
+    background: var(--grey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div > span {
+    color: white;
+    font-size: 2rem;
+}
+
+.more-button {
+    border: none;
+    background: var(--grey);
+    color: whitesmoke;
+    font-size: 3rem;
+}
+
+.white-nav {
+    grid-column: 1 / -1;
+}
+
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    height: 80vh;
+}
+
+.main-part,
+.email-newsletter {
+    flex-grow: 1;
+    height: 100%;
+    font-size: 4rem;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.email-newsletter {
+    background: var(--darkgrey);
+}
+
+.main-part {
+    background: var(--grey);
+}
+
+.guide-container {
+    height: 50vh;
+    margin-top: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.guide-card {
+    flex-grow: 1;
+    height: 100%;
+    font-size: 4rem;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--grey);
+}
+
+
+
+/* ======================================
+
+	MediaQuery-Reporter Styles
+
+========================================= */
+
+body:after {
+	content: "less than 320px";
+	font-size: 300%;
+	font-weight: bold;
+	position: fixed;
+	bottom: 60px;
+	width: 100%;
+	text-align: center;
+	background-color: hsla(1,60%,40%,0.7);
+	color: #fff;
+}
+@media only screen and (min-width: 320px) {
+	body:after {
+		content: "320 to 480px";
+		background-color: hsla(90,60%,40%,0.7);
+	}
+}
+@media only screen and (min-width: 480px) {
+	body:after {
+		content: "480 to 768px";
+		background-color: hsla(180,60%,40%,0.7);
+	}
+}
+@media only screen and (min-width: 768px) {
+	body:after {
+		content: "768 to 1024px";
+		background-color: hsla(270,60%,40%,0.7);
+	}
+}
+@media only screen and (min-width: 1024px) {
+	body:after {
+		content: "1024 and up";
+		background-color: hsla(360,60%,40%,0.7);
+	}
+}
