@@ -1,0 +1,228 @@
+/**
+==========================
+
+general
+
+==========================
+**/
+
+:root {
+  --yellow: #ffc600;
+  --black: #272727;
+  --grey: #999999;
+  --waterblue: #1abbe8;
+  --whitesmoke: #f5f5f5;
+  --darkblue: #045587;
+}
+
+
+
+
+html {
+  font-size: 10px;
+  color: var(--black);
+  scroll-behavior: smooth;
+  background-color: black;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+/**
+==========================
+
+main part
+
+==========================
+**/
+
+
+
+#main {
+  height: 100%;
+  width: 100%;
+}
+
+.pre-title {
+  color: #e8c67c;
+  font-size: 3rem;
+  font-family: 'Dancing Script', cursive;
+}
+
+#title {
+  color: var(--whitesmoke);
+  font-size: 5rem;
+  font-family: 'Dancing Script', cursive;
+}
+
+#img-div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  top: 0;
+}
+
+#image {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+}
+
+.title-part {
+  position: absolute;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title-part a {
+  margin-top: 30px;
+}
+
+#img-caption {  
+  color: #e8c67c;
+  font-size: 3rem;
+  font-family: 'Dancing Script', cursive;
+}
+
+.tribute-part {
+  width: 70%;
+  margin: 100px auto 0 auto;
+}
+
+#tribute-info {
+  font-family: 'EB Garamond', serif;
+  font-size: 2.5rem;
+  color: var(--whitesmoke);
+  line-height: 3.5rem;
+}
+
+.tribute-info-link {
+  color: var(--whitesmoke);
+  border-bottom: 1px solid var(--whitesmoke);
+}
+
+.tribute-info-link:hover {
+  color: #e8c67c;
+  border-bottom: 1px solid #e8c67c;
+}
+
+
+
+
+
+.albums-gallary {
+  width: 80%;
+  margin: 50px auto 100px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 200px 1fr;
+
+  gap: 10px;
+}
+
+.gallary-header {
+  color: #e8c67c;
+  font-size: 5rem;
+  font-family: 'Dancing Script', cursive;
+
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.albums-container {
+  grid-column: 1 / -1;
+  grid-row: 2 / -1;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.album-image {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+
+  -webkit-filter: grayscale(0) blur(0);
+  filter: grayscale(0) blur(0);
+  transition: .4s ease-in-out;
+}
+
+.album:hover .album-image{
+  -webkit-filter: grayscale(100%) blur(2px);
+  filter: grayscale(100%) blur(2px);
+  transition: .4s ease-in-out;
+}
+
+/* .album {
+  transition: transform .5s;
+  width: 300px;
+  
+}
+
+.album:hover {
+  -webkit-transform: scale(1.2); 
+      -ms-transform: scale(1.2); 
+          transform: scale(1.2); 
+} */
+
+.album{
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.album > p{
+  display: none;
+}
+
+.album:hover > p{
+  position: absolute;
+  top: 100px;
+  display: block;
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: bold;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: .4s ease-in-out;
+  line-height:150px;
+  margin:0;
+  display: block;
+
+}
+
+.ablum-info {
+  color: #e8c67c;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.album-link {
+  color: var(--waterblue);
+  border-bottom: 1px solid #e8c67c;
+}
