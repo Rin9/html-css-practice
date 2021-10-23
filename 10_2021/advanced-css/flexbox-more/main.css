@@ -1,0 +1,23 @@
+
+ul {
+  background-color: lightslategray;
+  padding: 20px;
+  height: 300px;
+
+  display: flex;
+  /* flex-flow is the short version of flex-direction + flex-wrap */
+  /* first value: direction, second value: wrap or no wrap */
+  /* flex-flow: column wrap; */
+  /* justify-content: center; */
+  align-items: stretch;
+}
+
+
+li {
+  list-style: none;
+  color: white;
+  background-color: #20b2aa;
+  padding: 10px;
+  margin: 20px;
+  width: 200px;
+}
