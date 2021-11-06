@@ -125,7 +125,9 @@ ul.header__main-nav--links li {
   padding-right: 3vw;
 }
 ul.header__main-nav--links li a {
+  /* this position attribute is for the hover effect */
   position: relative;
+
   padding: .2rem .6rem;
   font-size: calc(1rem + 0.66667vw);
 }  
@@ -261,6 +263,7 @@ a.showcase__content--link:active::after {
 
 section#work {
   display: flex;
+  /* use flex wrap to make it responsive and no media query */
   flex-wrap: wrap;
   justify-content: center;
 
