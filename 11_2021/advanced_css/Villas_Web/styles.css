@@ -1,0 +1,256 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Utility Components */
+:root {
+  font-size: 62.5%;
+  /* ==== custom properies ==== */
+  /* main color */
+  --color-primary: #730039;
+  --color-primary-m-light: hsla(330, 100%, 23%, 0.55);
+  --color-primary-m-dark: hsla(330, 100%, 23%, 0.85);
+
+  --color-secondary: #ffc513;
+  --color-secondary-m-light: hsla(45, 100%, 54%, 0.55);
+  --color-secondary-m-dark: rgba(255, 196, 19, 0.85);
+
+  --color-tertiary: #ff724c;
+  --color-tertiary-m-light: hsla(13, 100%, 65%, 0.55);
+  --color-tertiary-m-dark: rgba(255, 115, 76, 0.85);
+
+  --color-quaternary: #f6eedf;
+  --color-quaternary-m-light: hsla(39, 56%, 92%, 0.55);
+  --color-quaternary-m-dark: hsla(39, 56%, 92%, 0.85);
+
+  /* Transation Duration */
+  --transation-duration: 0.3s;
+
+  /* section title font size */
+  --font-size-title: cal(2rem + 2vw);
+
+  /* Section Padding */
+  --padding-section: 8vh 3vw;
+}
+
+a:link,
+a:visited {
+  color: var(--color-quaternary);
+  text-decoration: none;
+  font-size: calc(0.5rem + 1vw);
+  padding: 1rem 2rem;
+  border-radius: 0.3rem;
+  position: relative;
+  transition: all var(--transation-duration) cubic-bezier(1, 0, 0, 1);
+  z-index: 1;
+}
+
+/* paragraphs */
+p {
+  color: white;
+  font-size: calc(1rem + 1vw);
+  font-weight: 300;
+}
+/* list item */
+li {
+  list-style: none;
+  margin-bottom: 4rem;
+}
+/* icon style */
+i {
+  font-size: var(--font-size-title);
+  color: (var(--color-secondary));
+}
+
+body {
+  font-family: "Titillium Web", sans-serif;
+  line-height: 1.7;
+  background-color: var(--color-quaternary);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: [container-start] 1fr [center-start] repeat(
+      10,
+      [col-start] minmax(min-content, 11rem) [col-end]
+    ) [center-end] 1fr [container-end];
+  grid-template-rows: 100vh repeat(8, min-content);
+}
+
+/* main styling */
+
+.container > * {
+  font-size: 2rem;
+}
+
+/* ==== header section ==== */
+header#header {
+  grid-column: container-start / container-end;
+  background: linear-gradient(
+      var(--color-primary-m-light),
+      var(--color-primary-m-light)
+    ),
+    url(img/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Nav */
+.header__main-nav {
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 2;
+}
+
+.header__main-nav input[type=checkbox] {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  height: 5rem;
+  width: 5rem;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+/* hamburger  */
+.header__main-nav--hamburger {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  height: 5rem;
+  width: 5rem;
+  padding: 1rem;
+  background-color: var(--color-secondary);
+  z-index: 2;
+
+
+
+  display: grid;
+  place-items: center;
+}
+
+/* hamburger lines */
+.header__main-nav--hamburger > div {
+  position: relative;
+  height: .3rem;
+  width: 100%;
+  background-color: var(--color-quaternary);
+  display: grid;
+  place-items: center;
+  transition: all var(--transation-duration) ease-in-out;
+}
+
+/* hamburger top and bottom line */
+.header__main-nav--hamburger > div::before,
+.header__main-nav--hamburger > div::after {
+  content: "";
+  position: absolute;
+  top: -1rem;
+  width: 60%;
+  height: inherit;
+  background-color: inherit;
+  z-index: 2;
+}
+
+.header__main-nav--hamburger > div::before {
+  left: 0;
+}
+
+.header__main-nav--hamburger > div::after {
+  top: 1rem;
+  right: 0;
+}
+
+
+
+
+/* ==== booking centent section ==== */
+section#booking-content {
+  background-color: var(--color-secondary);
+  grid-column: center-start / col-end 6;
+  height: 400px;
+}
+
+/* ==== booking date section ==== */
+section#booking-date {
+  background-color: var(--color-tertiary);
+  grid-column: col-start 7 / center-end;
+  height: 400px;
+}
+
+/* ==== villa centent section ==== */
+section#villas {
+  background-color: var(--color-primary);
+  grid-column: container-start / container-end;
+  height: 400px;
+}
+
+/* ==== motto section ==== */
+section#motto {
+  background-color: var(--color-secondary);
+  grid-column: container-start / container-end;
+  height: 400px;
+}
+
+/* ==== event section ==== */
+section#events-content {
+  background-color: var(--color-tertiary);
+  grid-column: container-start / col-end 9;
+  height: 400px;
+}
+
+/* ==== event text section ==== */
+section#events-text {
+  background-color: var(--color-primary);
+  grid-column: col-start 10 / center-end;
+  height: 400px;
+}
+
+/* ==== gallery text section ==== */
+section#gallery-text {
+  background-color: var(--color-secondary);
+  grid-column: center-start / col-end 1;
+  height: 400px;
+}
+
+/* ==== gallery carousel section ==== */
+section#gallery-carousel {
+  background-color: var(--color-tertiary);
+  grid-column: col-start 2 / container-end;
+  height: 400px;
+}
+
+/* ==== feature section ==== */
+section#features-content {
+  background-color: var(--color-primary);
+  grid-column: container-start / col-end 9;
+  height: 400px;
+}
+
+/* ==== feature text section ==== */
+section#features-text {
+  background-color: var(--color-secondary);
+  grid-column: col-start 10 / center-end;
+  height: 400px;
+}
+
+/* testimonials section */
+section#testimonials {
+  background-color: var(--color-tertiary);
+  grid-column: center-start / center-end;
+  height: 400px;
+}
+
+/* footer section */
+footer#footer {
+  background-color: var(--color-primary);
+  grid-column: container-start / container-end;
+  height: 400px;
+}
