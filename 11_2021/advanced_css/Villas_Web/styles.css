@@ -74,10 +74,12 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: [container-start] 1fr [center-start] repeat(
+  grid-template-columns:
+    [container-start] 1fr [center-start] repeat(
       10,
       [col-start] minmax(min-content, 11rem) [col-end]
-    ) [center-end] 1fr [container-end];
+    )
+    [center-end] 1fr [container-end];
   grid-template-rows: 100vh repeat(8, min-content);
 }
 
@@ -103,12 +105,12 @@ header#header {
 /* Nav */
 .header__main-nav {
   position: fixed;
-  top:0;
+  top: 0;
   left: 0;
   z-index: 2;
 }
 
-.header__main-nav input[type=checkbox] {
+.header__main-nav input[type="checkbox"] {
   position: absolute;
   top: 3rem;
   left: 3rem;
@@ -130,16 +132,29 @@ header#header {
   background-color: var(--color-secondary);
   z-index: 2;
 
-
-
   display: grid;
   place-items: center;
+
+  animation: main-nav 2s;
 }
+
+@keyframes main-nav {
+  0% {
+    transform: translateX(150rem) rotate(900deg);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0) rotate(0);
+    opacity: 1;
+  }
+}
+
 
 /* hamburger lines */
 .header__main-nav--hamburger > div {
   position: relative;
-  height: .3rem;
+  height: 0.3rem;
   width: 100%;
   background-color: var(--color-quaternary);
   display: grid;
@@ -168,7 +183,177 @@ header#header {
   right: 0;
 }
 
+/* rotate menu */
+.header__main-nav
+  input[type="checkbox"]:checked
+  + .header__main-nav--hamburger
+  > div {
+  transform: rotate(135deg);
+}
 
+.header__main-nav
+  input[type="checkbox"]:checked
+  + .header__main-nav--hamburger
+  > div::before {
+  left: 0;
+  top: 0;
+  width: 100%;
+  transform: rotate(270deg);
+}
+
+.header__main-nav
+  input[type="checkbox"]:checked
+  + .header__main-nav--hamburger
+  > div::after {
+  opacity: 0;
+}
+
+.header__main-nav
+  input[type="checkbox"]:checked:hover
+  + .header__main-nav--hamburger
+  > div {
+  transform: rotate(405deg);
+}
+
+/* links menu */
+.header__main-nav--menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+.header__main-nav--menu > div {
+  background-color: var(--color-secondary-m-dark);
+  height: 200%;
+  width: 200%;
+  display: grid;
+  place-items: center;
+  transform: scaleX(0);
+  transition: all 0.5s ease-in-out;
+}
+
+.header__main-nav--menu > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* display the menu when the checkbox is checked */
+.header__main-nav input[type="checkbox"]:checked ~ .header__main-nav--menu {
+  visibility: visible;
+}
+
+.header__main-nav
+  input[type="checkbox"]:checked
+  ~ .header__main-nav--menu
+  > div {
+  transform: scaleX(1);
+}
+
+.header__main-nav
+  input[type="checkbox"]:checked
+  ~ .header__main-nav--menu
+  > div
+  > div {
+  opacity: 1;
+}
+
+.header__main-nav--menu ul li a:link,
+.header__main-nav--menu ul li a:visited {
+  z-index: 5;
+  font-size: calc(1.5rem + .5vw);
+}
+
+.header__main-nav--menu ul li a:link::before,
+.header__main-nav--menu ul li a:visited::before {
+  content: "";
+  position: absolute;
+  top:0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transform: scaleY(0);
+  background-color: var(--color-primary-m-dark);
+  transition: transform var(--transation-duration) ease-in-out;
+}
+
+.header__main-nav--menu ul li a:hover::before,
+.header__main-nav--menu ul li a:active::before {
+  transform: scaleY(1);
+}
+
+/* the rest of the heading section */
+.header__logo__content {
+  display: grid;
+  grid-template-columns: 1fr minmax(30rem, 1fr) 1fr;
+  grid-template-rows: min-content;
+  height: 90%;
+  justify-items: center;
+}
+
+.header__logo__content--logo {
+  grid-column: 2 / 3;
+  letter-spacing: .2rem;
+}
+
+.header__logo__content--logo span {
+  color: var(--color-tertiary);
+  font-size: 3rem;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.header__logo__content--content {
+  grid-column: 1 / -1;
+  align-self: center;
+}
+
+.header__logo__content--content__title {
+  font-size: calc(4rem + 4vw);
+  font-weight: 300;
+  color: white;
+  text-transform: uppercase;
+  padding: 0 2rem 0 var(--font-size-title);
+}
+
+.header__logo__content--content__para {
+  font-size: calc(1rem + 2vw);
+  font-weight: 500;
+  padding: 2vh 2rem 6vh var(--font-size-title);
+}
+
+.header__logo__content--content__link:link, 
+.header__logo__content--content__link:visited {
+  margin-left: var(--font-size-title);
+  border: .2rem solid var(--color-tertiary);
+}
+
+.header__logo__content--content__link:link::before, 
+.header__logo__content--content__link:visited::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-tertiary);
+  transform: scaleX(0);
+  transition: all .45s cubic-bezier(1, 0, 0, 1);
+  z-index: -1;
+}
+
+.header__logo__content--content__link:hover::before, 
+.header__logo__content--content__link:active::before {
+  transform: scaleX(1);
+}
 
 
 /* ==== booking centent section ==== */
