@@ -513,9 +513,16 @@ section#booking-date {
 
 /* ==== villa centent section ==== */
 section#villas {
-  background-color: var(--color-primary);
   grid-column: container-start / container-end;
-  height: 400px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  /* gap: 2rem; */
+}
+
+div[class^=villas] {
+  padding: 2rem;
+  
 }
 
 /* ==== motto section ==== */
@@ -597,6 +604,32 @@ footer#footer {
   /* booking content section */
   section#booking-content {
     padding: 4vh 3vw;
+    grid-column: center-start / center-end;
+  }
+
+  .booking-content__title {
+    text-align: center;
+  }
+  .booking-content__title::after {
+    width: 20%;
+    left: 40%;
+  }
+
+  /* booking date section */
+  section#booking-date {
+    padding: 4vh 3vw;
+    grid-column: center-start / center-end;
+    row-gap: 7vh;
+  }
+
+  .booking-date__schedule--arrival > div,
+  .booking-date__schedule--departure > div,
+  .booking-date__schedule--guests > div {
+    padding: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: min-content;
+    column-gap: 2vw;
+    place-items: center;
   }
 }
 
@@ -606,5 +639,37 @@ footer#footer {
   /* header section */
   .header__logo__content--content__para {
     font-size: 2rem;
+  }
+
+  /* booking date section */
+  section#booking-date {
+    grid-template-rows: repeat(2, max-content);
+  }
+  .booking-date__schedule--arrival > div,
+  .booking-date__schedule--departure > div,
+  .booking-date__schedule--guests > div {
+    padding: 4rem;
+    grid-template-columns: min-content;
+  }
+
+  /* booking content */
+  .booking-content__para {
+    font-size: 1.5rem;
+  }
+}
+
+
+/* 400px mark */
+@media screen and (max-width: 400px) {
+  /* booking date content */
+  .booking-date__schedule {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: auto;
+    row-gap: 4vh;
+  }
+
+  .booking-date__contact {
+    justify-self: center;
+    padding: 0 2rem;
   }
 }
